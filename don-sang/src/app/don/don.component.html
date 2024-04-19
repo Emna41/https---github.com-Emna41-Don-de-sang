@@ -1,0 +1,88 @@
+<form (submit)="submitForm() ">
+<div class="signup-container">
+    <div class="left-container">
+      <div class="doctor">
+        <img src="assets/images/doctor.png">
+      </div>
+    </div>
+    <div class="right-container">
+      <header>
+        <h1>Pour prendre un rendez-vous, veuillez remplir ce formulaire.!</h1>
+        <div class="set">
+          <div class="patient-name">
+            <label for="patient-name">Nom</label>
+            <input id="patient-name" type="text" placeholder="Votre nom" name="nom" [(ngModel)]="formValues.nom">
+          </div>
+          <div class="patient-username">
+            <label for="patient-username">Username</label>
+            <input id="patient-username" type="text" placeholder="UserName" name="username" [(ngModel)]="formValues.username">
+          </div>
+        </div>
+        <div class="set">
+          <div class="patient-location">
+            <label for="patient-location">Localisation</label>
+            <input id="patient-location" type="text" placeholder="Votre Localisation" name="localisation" [(ngModel)]="formValues.localisation">
+          </div>
+          <div class="patient-rendez-vous">
+            <label for="patient-rendez-vous">Date de rendez-vous</label>
+            <input id="patient-rendez-vous" type="text" placeholder="MM/DD/YYYY" name="rendez_vous" [(ngModel)]="formValues.rendez_vous">
+          </div>
+        </div>
+        <div class="set">
+          <div class="patient-gender">
+            <label for="patient-gender-female">Gender</label> 
+            <div class="radio-container">
+              <input id="patient-gender-female" name="gender" type="radio" value="female"  [(ngModel)]="formValues.gender">
+              <label for="patient-gender-female">Female</label>
+              <input id="patient-gender-male" name="gender" type="radio" value="male" [(ngModel)]="formValues.gender">
+              <label for="patient-gender-male">Male</label>
+            </div>
+          </div>
+         
+            <div class="patient-number">
+                <label for="patient-number">Numero de telephone</label>
+                <input id="patient-number" type="text" name="numtel"placeholder="Votre num tel" [(ngModel)]="formValues.numtel">
+              </div>
+    
+        </div>
+        <div class="set">
+            <div class="col mb-2">
+        <div class="form-floating mt-3 mb-3">
+            <select class="form-select" id="banque" name="banque"  [(ngModel)]="formValues.banque">
+                <option>Choisir un banque de sang s.v.p: </option>
+                <option>Le centre national de Tunis</option>
+                <option>Le centre régional de Sousse</option>
+                <option>Le centre régional de Sfax</option>
+                <option>Le centre régional de Jendouba</option>
+                <option>Le centre régional de Gabès</option>
+                <option>Le centre régional de Gafsa</option>
+            </select>
+        </div></div>
+        <div class="col ">
+        <div class="form-floating mt-3 ">
+            <select class="form-select" id="typesang" name="typesang"  [(ngModel)]="formValues.typesang">
+                <option>Choisir Votre groupe sanguin</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>Je ne sais pas.</option>
+            </select>
+        </div>
+    </div>
+    </div>
+      </header>
+      <footer>
+        <div class="set">
+          <button id="next">Envoyer</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</form>
+
+  

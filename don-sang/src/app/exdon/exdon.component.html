@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of data">
+      <div class="card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">{{item.nom}}</h5>
+      <h5 class="card-title">{{item.username}}</h5>
+      
+      </div>
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{item.localisation}}</li>
+      <li class="list-group-item">{{item.rendez_vous}}</li>
+      <li class="list-group-item">{{item.gender}}</li>
+      <li class="list-group-item">{{item.numtel}}</li>
+      <li class="list-group-item">{{item.banque}}</li>
+      <li class="list-group-item">{{item.typesang}}</li>
+      <li class="list-group-item">{{item.maladies}}</li>
+      </ul>
+      <div class="card-body">
+      <button class="btn btn-outline-secondary">Supprimer</button>
+      <button class="btn btn-outline-secondary">Accepter</button>
+       </div>
+       </div>
+    </div>
+</div>

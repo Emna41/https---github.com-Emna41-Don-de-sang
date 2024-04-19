@@ -1,0 +1,22 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <div class="login-box">
+    <div class="login-header">
+      <header>Login</header>
+    </div>
+    <div class="input-box">
+      <input type="text" class="input-field" placeholder="username" [(ngModel)]="loginObj.username" required name="username"  >
+    </div>
+    <div class="input-box">
+      <input type="password" class="input-field" [(ngModel)]="loginObj.password" required name="password">
+    </div>
+    <div class="input-box">
+      <a routerLink="/accueil"  class="btn" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="onLogin()" >Se connecter</a>
+        
+    </div>
+    <div class="sign-up-link">
+      <p>Don't have account ? <a routerLink="/inscription"  class="signup" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Se connecter</a>
+      </p>
+    </div>
+  </div>
+</div>

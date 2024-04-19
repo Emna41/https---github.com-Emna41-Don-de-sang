@@ -1,0 +1,171 @@
+<div class="container" id="raison">
+    <img class="qui_done" src="assets/images/donate.jpeg" alt="image1" >
+    <div class="conditions">
+    <h3>Les conditions pour donner de sang</h3><hr>
+    <div class="information">
+    <label>Les conditions pour donner du sang peuvent varier légèrement selon les politiques spécifiques de chaque pays ou institution médicale, mais voici généralement les critères communs :</label>
+    <ul>
+        <ul>
+            <li><b>Âge</b> : Les donneurs doivent généralement avoir un âge minimum, souvent entre <u>16 et 18 ans</u>, et un âge maximum, généralement entre <u>60 et 70 ans</u>. Cependant, ces limites peuvent varier selon les réglementations locales.</li>
+            <li><b>Poids </b> : Les donneurs doivent généralement peser au moins un certain poids minimum, généralement <u>autour de 50 kg.</u></li>
+            <li><b>État de santé général </b>: Les donneurs doivent être <u>en bonne santé générale, sans symptômes de maladies infectieuses ou chroniques</u>. Ils ne doivent pas être atteints de maladies transmissibles par le sang, telles que le VIH ou l'hépatite.</li>
+            <li><b>Tension artérielle </b>: La tension artérielle doit être dans une plage acceptable déterminée par l'organisation de collecte de sang.</li>
+            <li><b>Niveau d'hémoglobine</b> : Le taux d'hémoglobine dans le sang doit être dans une fourchette spécifique pour garantir que le don ne provoque pas d'anémie chez le donneur.</li>
+            <li><b>Mode de vie</b> : Certains comportements à risque peuvent disqualifier un donneur potentiel, comme avoir récemment voyagé dans des zones où des maladies infectieuses sont courantes, avoir eu des rapports sexuels non protégés, ou avoir consommé des drogues intraveineuses.</li>
+            <li><b>Historique médical </b>: Les antécédents médicaux, y compris les traitements récents, les interventions chirurgicales et les maladies passées, peuvent affecter l'admissibilité au don de sang.</li>
+            <li><b>Prise de médicaments </b>: Certains médicaments peuvent disqualifier temporairement ou définitivement un donneur, en fonction de leur effet sur la santé ou la sécurité du sang.</li>
+            <li><b>Mode de vie sain </b>: Les donneurs sont généralement encouragés à mener un mode de vie sain, y compris une alimentation équilibrée, l'abstention de tabac et de drogues, et la limitation de la consommation d'alcool.</li>
+        </ul>
+    </ul>
+</div>
+</div>
+</div>
+<div class="container-map">
+
+    
+        <div class="map">
+            <h1>Où on se trouve?</h1>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7558.149205432766!2d10.150872370706244!3d36.80956975932728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd339e90c9f481%3A0xd9b67502b8aeb544!2sCentre%20national%20de%20transfusion%20sanguine!5e0!3m2!1sfr!2stn!4v1712925689608!5m2!1sfr!2stn" width="600" height="1000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+       
+
+    
+    <div class="container-right">
+        <ul>
+            <li><label>Centre National de Transfusion Sanguine - Tunis <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : 13, Rue Djebel Lakhdhar Bab Sâadoun Tunis, Tunisia</p>
+                <p>Tél : 71 573 884 / 71 574 106 / 71 573 948</p>
+                <p>Fax : 71 562 957</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Bizerte
+                
+                <span id="toggle" (click)="toggleAdresse()">+</span></label>
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Bizerte 7000 Bizerte</p>
+                <p>Tél : 72 422 057</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Béja
+                
+                 <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Béja 9000 Béja</p>
+                Tél : 78 457 322 / 78 455 431
+                </div></li>
+            <li><label>CRTS de Jendouba
+                <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>    Adresse : Hôpital Régional de Jendouba 8100 Jendouba</p>
+                <p> Tél : 78 604 558 / 78 603 600</p>
+                <p>Fax : 78 604 569</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Nabeul<span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Nabeul 8000 Nabeul</p>
+                <p>Tél : 72 285 633 </p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Zaghouan
+                
+               <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Zaghouan 1100 Zaghouan</p>
+                <p> Tél : 72 676 700</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional du Kef <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional du Kef 7100 Le Kef</p>
+                <p>Tél : 78 228 900 / 78 228 923 </p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Siliana
+                
+                 <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Siliana 6100 Siliana</p>
+                <p>Tél : 78 872 800</p>
+                </div></li>
+            <li><label>CRTS de Sousse<span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p> Adresse : Hôpital Farhat Hached de Sousse 4000 Sousse</p>
+                <p> Tél : 73 223 311</p>
+                <p>Fax : 73 224 411</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Sahloul de Sousse<span id="toggle" (click)="toggleAdresse()">+</span></label><div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Sahloul de Sousse 4000 Sousse</p>
+                <p>Tél : 73 369 411</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Fattouma Bourguiba de Monastir
+                
+                <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Fattouma Bourguiba de Monastir 5000 Monastir</p>
+                <p>Tél : 73 460 411 </p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Mahdia
+               
+                 <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p> Adresse : Hôpital Régional de Mahdia 5100 Mahdia</p>
+                <p>Tél : 73 671 744</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Kairouan <span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Kairouan 3100 Kairouan</p>
+                <p> Tél : 77 226 300 </p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Kasserine
+                
+                <span id="toggle" (click)="toggleAdresse()">+</span></label><div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Kasserine 1200 Kasserine</p>
+                <p>Tél : 77 474 910 / 77 474 022</p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Sidi Bouzid
+                
+                <span id="toggle" (click)="toggleAdresse()">+</span></label> <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Sidi Bouzid 9100 Sidi Bouzid</p>
+                <p>Tél : 76 632 500</p>
+                </div></li>
+            <li><label>CRTS de Sfax<span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Habib Bourguiba de Sfax 3000 Sfax</p>
+                <p>Tél : 74 241 511 / 74 245 462</p>
+                <p>Fax : 74 245 433 </p>
+                </div></li>
+            <li><label>CRTS de Gafsa<span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Gafsa 2100 Gafsa</p>
+                <p>Tél : 76 225 177 / 76 225 055</p>
+                <p>Fax : 76 229 750 </p>
+                </div></li>
+            <li><label>Banque du Sang de l'Hôpital Régional de Tozeur
+                
+                <span id="toggle" (click)="toggleAdresse()">+</span></label>
+                <div id="adresse" *ngIf="showAdresse">
+                <p>Adresse : Hôpital Régional de Tozeur 2200 Tozeur</p>
+                <p>Tél : 76 453 400 </p>
+                </div></li>
+            <li><label>CRTS de Gabès<span id="toggle" (click)="toggleAdresse()">+</span></label>
+
+                <div id="adresse" *ngIf="showAdresse">
+                <p> Adresse : Hôpital Régional de Gabès 6001 Gabès</p>
+                <p>Tél : 75 290 300 / 75 292 700</p>
+                <p>Fax : 75 292 855 /p>
+                </div></li> 
+    </ul>
+    </div>
+</div>
+</div>
+

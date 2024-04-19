@@ -1,0 +1,148 @@
+<!--form>
+    <div class="container-md ">
+        <div class="card-group mt-3 mb-3">
+            <div class="card">
+                <img class="card-img-top mt-2"src="assets/images/blood.png" alt="Card image" id="imginscription">
+                <div class="card-body">
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="nom" placeholder="entrer votre nom" name="nom" required>
+                        <label for="nom">Nom</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="prenom" placeholder="entrer votre prenom" name="prenom" required>
+                        <label for="prenom">Prenom</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="text" class="form-control" id="username" placeholder="entrer votre username" name="username" required>
+                        <label for="username">User Name</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="date" class="form-control" id="date_naissance" placeholder="entrer votre date de naissance" name="date_naissance" required>
+                        <label for="date_naissance">Date de naissance</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <select class="form-select" id="typesang" name="typesang" required>
+                            <option>Votre groupe sanguin</option>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                            <option>Je ne sais pas.</option>
+                        </select>
+                    </div>
+                    <div class="form-floating mt-3 mb-3" >
+                        <input type="text" class="form-control" id="localisation" placeholder="entrer votre adresse" name="localisation" required>
+                        <label for="localisation">Localisation</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="number" class="form-control" id="numtel" placeholder="entrer votre nnuméro" name="numtel" pattern="[0-9]{8}" required >
+                        <label for="numtel">Numéro de téléphone</label>
+                    </div>
+                    <div class="form-floating mt-3 mb-3">
+                        <input type="password" class="form-control" id="motpasse" placeholder="mot de passe" name="motpasse" maxlength="12" required >
+                        <label for="motpasse">Mot de passe</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form-->
+<div class="container">
+    <form>
+      <div class="row">
+        <h4>Account</h4>
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="Username" name="username" id="username" [(ngModel)]="signupObj.username">
+          <div class="input-icon">
+            <i class="fa fa-user"></i>
+          </div>
+        </div>
+        <div class="input-group input-group-icon">
+          <input type="email" placeholder="Email Address" [(ngModel)]="signupObj.email" name="email" id="email">
+          <div class="input-icon">
+            <i class="fa fa-envelope"></i>
+          </div>
+        </div>
+        <div class="input-group input-group-icon">
+          <input type="password" placeholder="Password" [(ngModel)]="signupObj.password" name="password" id="password">
+          <div class="input-icon">
+            <i class="fa fa-key"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-half">
+          <h4>Date of Birth</h4>
+          <input type="date" name="daten" id="daten" [(ngModel)]="signupObj.daten">
+        </div>
+        <div class="col-half">
+          <h4>Gender</h4>
+          <div class="input-group" name="genderr" id="genderr">
+            <input id="gender-male" type="radio" [(ngModel)]="signupObj.gender" name="gender" value="male">
+            <label for="gender-male">Male</label>
+            <input id="gender-female" type="radio" name="gender" [(ngModel)]="signupObj.gender" value="female">
+            <label for="gender-female">Female</label>
+          </div>
+        </div>
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="Num CIN" [(ngModel)]="signupObj.cin" name="cin" id="cin">
+          <div class="input-icon">
+            <i class="fa fa-num-cin"></i>
+          </div>
+        </div>
+        <div class="input-group input-group-icon">
+            <input type="text" placeholder="Num Tel" [(ngModel)]="signupObj.numtel" name="numtel" id="numtel">
+            <div class="input-icon">
+              <i class="fa fa-num-tel"></i>
+            </div>
+        </div>
+        <div class="input-group input-group-icon">
+            <input type="text" placeholder="Localisation" [(ngModel)]="signupObj.localisation" name="localisation" id="localisation">
+            <div class="input-icon">
+              <i class="fa fa-localisation"></i>
+            </div>
+          </div> 
+          <div class="input-group">
+            <select name="typesang" [(ngModel)]="signupObj.typesang" id="typesang" >
+                <option>Votre groupe sanguin</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>Je ne sais pas.</option>
+            </select>
+        </div>
+     
+      <div class="row">
+        <h4>Termes et Conditions</h4>
+        <div class="input-group">
+          <input id="terms" type="checkbox">
+          <label for="terms">Je reconnais et conviens de respecter toutes les conditions énoncées..</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="link">
+            <a routerLink="/information" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Voir les conditions</a><br>
+
+          </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="input-box">
+          <button class="btn"  (click)="onSignup()"  id="submit"><label for="submit">Sign In</label></button>
+          
+      </div>
+      </div>
+      
+    </form>
+  </div>
+  

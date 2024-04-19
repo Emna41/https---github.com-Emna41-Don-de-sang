@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.img_doner{
+    max-width: 500px;
+    float: left;
+    border-radius: 10px;
+    border: 3px solid white;
+    margin-right: 20px;
+}
+#raison{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 30px auto;
+    width: 100%;
+}
+.text h3{
+    font-size: 50px;
+    padding: 5px;
+}
+.types{
+    width: 500px;
+    margin-top: 10px;
+}
+.type{
+    display: contents;
+    min-height: 80vh;
+    margin: 40px ;
+    width: 100%;
+}
+h3{
+    font-size: 30px;
+    padding: 5px; 
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+.paragraphe{
+    margin-left: 20px;
+}
+.button {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  height: 30px;
+  width: 100%;
+  max-width: 150px;
+  line-height: 30px;
+  font-family: 'Helvetica';
+  overflow: hidden;
+  font-size: 14px;
+  color: #0047ba;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #fff;
+  border-left: 2px solid #0047ba;
+}
+
+.button span {
+  position: absolute;
+  transition: all 200ms ease-in-out;
+}
+
+.button .line-1 {
+  top: 0;
+  left: 0;
+  width: 158px;
+  height: 2px;
+  background: #0047ba;
+  transform: translateX(-48px);
+}
+
+.button .line-2 {
+  bottom: 0;
+  right: 0;
+  width: 130px;
+  height: 2px;
+  background: #0047ba;
+  transform: translateX(-25px);
+}
+
+.button .line-3 {
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 2px;
+  background: #0047ba;
+  transform: translateX(20px);
+}
+
+.button .line-4 {
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 2px;
+  background: #0047ba;
+  transform: translateX(95px);
+}
+
+.button .line-5 {
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 50px;
+  background: #0047ba;
+  transform: translateY(0px);
+}
+
+.button .line-6 {
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 8px;
+  background: #0047ba;
+  transform: translateY(-48px);
+}
+
+.button:hover .line-1 {
+  transform: translateX(0px);
+}
+
+.button:hover .line-2 {
+  transform: translateX(-65px);
+}
+
+.button:hover .line-3 {
+  transform: translateX(60px);
+}
+
+.button:hover .line-4 {
+  transform: translateX(55px);
+}
+
+.button:hover .line-5 {
+  transform: translateY(44px);
+}
+
+.button:hover .line-6 {
+  transform: translateY(-2px);
+}
+
+

@@ -1,0 +1,67 @@
+
+<div class="container" id="tab">
+   <div class="text">
+      Demande de sang
+   </div>
+   <form (click)="submitForm">
+      <div class="form-row">
+         <div class="input-data">
+            <input type="text" name="nom" [(ngModel)]="formValues.nom" >
+            <div class="underline"></div>
+            <label for="">Name</label>
+         </div>
+         <div class="input-data">
+            <input type="text" f name="username" [(ngModel)]="formValues.username">
+            <div class="underline"></div>
+            <label for="">UserName</label>
+         </div>
+      </div>
+      <div class="form-row">
+         <div class="input-data">
+            <input type="text"  name="typesang" [(ngModel)]="formValues.typesang">
+            <div class="underline"></div>
+            <label for="">Le type de sang que vous chercher à avoir</label>
+         </div>
+         <div class="input-data">
+            <input type="text"  name="numtel" [(ngModel)]="formValues.numtel">
+            <div class="underline"></div>
+            <label for="">Numéro de téléphone</label>
+         </div>
+      </div>
+      <div class="form-row">
+      <div class="input-data textarea">
+         <textarea rows="8" cols="80"  name="message" [(ngModel)]="formValues.message"></textarea>
+         <br />
+         <div class="underline"></div>
+         <label for="">Si vous voulez ajouter d 'autre remarque</label>
+         <br />
+        
+               <button value="submit" >Envoyer</button>
+            
+      </div>
+      </div>
+       </form>
+</div>
+<!--div class="container">
+  <div class="row pt-3">
+     <div class="col-6">
+        <h4>Demande informations</h4>
+     </div>
+     <div class="col-6 text-end">
+        <button class="btn btn-outline-success">Ajouter une demande</button>
+     </div>
+     <div class="row mt-5">
+        <table class="table  table-bordered">
+           <tr>
+              <th>Id</th>
+              <th>Nom</th>
+              <th>UserName</th>
+              <th>TypeSang</th>
+              <th>Numero de telephone</th>
+              <th>Message</th>
+              <th>Opération</th>
+           </tr>
+        </table>
+     </div>
+  </div>
+</div-->
