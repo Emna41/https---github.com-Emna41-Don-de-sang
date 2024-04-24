@@ -19,10 +19,14 @@ export class ExdonComponent {
     this.afficheDon();
   }
   afficheDon() {
-  this.http.get<any[]>('http://localhost/api/don.php').subscribe(
-    (response: any[]) => {
-      this.data = response; 
-      alert(response[0].message); 
-    })
+    this.http.get<{ data: any[], message: string }>('http://localhost/api/don.php').subscribe(
+      (response) => {
+        this.data = response.data; 
+        alert(response.message); 
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
 
   }}

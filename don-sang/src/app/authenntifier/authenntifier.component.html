@@ -1,22 +1,40 @@
 <router-outlet></router-outlet>
-<div class="container">
-  <div class="login-box">
-    <div class="login-header">
-      <header>Login</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-6">
+                <div class="login-box p-4">
+                    <div class="login-header mb-4">
+                        <h1 class="text-center">Connexion</h1>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="le nom de l'utilisateur" autocomplete="off" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="le mot de passe" autocomplete="off" required>
+                        </div>
+                        <a routerLink="/accueil"  class="btn-block login-button" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="onLogin()" >Se connecter</a>
+                      </form>
+                    <div class="text-center mt-3">
+                        <p>Vous n'avez pas de compte ? <a routerLink="/inscription"  class="signup" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> --S'inscrire--</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="input-box">
-      <input type="text" class="input-field" placeholder="username" [(ngModel)]="loginObj.username" required name="username"  >
-    </div>
-    <div class="input-box">
-      <input type="password" class="input-field" [(ngModel)]="loginObj.password" required name="password">
-    </div>
-    <div class="input-box">
-      <a routerLink="/accueil"  class="btn" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="onLogin()" >Se connecter</a>
-        
-    </div>
-    <div class="sign-up-link">
-      <p>Don't have account ? <a routerLink="/inscription"  class="signup" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Se connecter</a>
-      </p>
-    </div>
-  </div>
-</div>
+</body>
+</html>
+
+
+
+

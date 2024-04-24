@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container mt-" >
     <div class="row">
       <div class="col-md-4" *ngFor="let item of data">
       <div class="card" style="width: 18rem;">
-      <div class="card-body">
+      <div class="card-body"> 
       <h5 class="card-title">{{item.nom}}</h5>
       <h5 class="card-title">{{item.username}}</h5>
       
@@ -17,8 +17,8 @@
       <li class="list-group-item">{{item.maladies}}</li>
       </ul>
       <div class="card-body">
-      <button class="btn btn-outline-secondary">Supprimer</button>
-      <button class="btn btn-outline-secondary">Accepter</button>
+      <button class="btn btn-outline-danger">Supprimer</button>
+      <button class="btn btn-outline-success">Accepter</button>
        </div>
        </div>
     </div>
