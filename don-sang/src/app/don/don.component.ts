@@ -24,7 +24,8 @@ export class DonComponent implements OnInit{ //DonComponent. Implémente l'inter
     gender:'',
     numtel: '',
     banque:'',
-    typesang: ''
+    typesang: '',
+    maladies:''
   };
   
   constructor(private http: HttpClient, private router: Router) { }

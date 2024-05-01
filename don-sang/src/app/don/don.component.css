@@ -48,7 +48,7 @@
 
 /* Right Container */
 .right-container {
-  background: rgb(108, 172, 202);
+  background: #F6DFE2;
   display: grid;
   grid-template-areas: "." ".";
   width: 500px;

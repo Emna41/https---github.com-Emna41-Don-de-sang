@@ -1,67 +1,63 @@
-
-<div class="container" id="tab">
-   <div class="text">
-      Demande de sang
-   </div>
-   <form (click)="submitForm">
-      <div class="form-row">
-         <div class="input-data">
-            <input type="text" name="nom" [(ngModel)]="formValues.nom" >
-            <div class="underline"></div>
-            <label for="">Name</label>
+<form (submit)="submitForm()">
+   <div class="signup-container">
+       <div class="left-container">
+         <div class="doctor">
+           <img src="assets/images/doctor1.png">
          </div>
-         <div class="input-data">
-            <input type="text" f name="username" [(ngModel)]="formValues.username">
-            <div class="underline"></div>
-            <label for="">UserName</label>
-         </div>
-      </div>
-      <div class="form-row">
-         <div class="input-data">
-            <input type="text"  name="typesang" [(ngModel)]="formValues.typesang">
-            <div class="underline"></div>
-            <label for="">Le type de sang que vous chercher à avoir</label>
-         </div>
-         <div class="input-data">
-            <input type="text"  name="numtel" [(ngModel)]="formValues.numtel">
-            <div class="underline"></div>
-            <label for="">Numéro de téléphone</label>
-         </div>
-      </div>
-      <div class="form-row">
-      <div class="input-data textarea">
-         <textarea rows="8" cols="80"  name="message" [(ngModel)]="formValues.message"></textarea>
-         <br />
-         <div class="underline"></div>
-         <label for="">Si vous voulez ajouter d 'autre remarque</label>
-         <br />
+       </div>
+       <div class="right-container">
+         <header>
+           <h1>Comment nous pouvons vous aidé</h1>
+           <div class="set">
+            <div class="patient-name">
+                <label for="patient-name">Nom</label>
+                <input id="patient-name" type="text" placeholder="Votre nom" name="nom" [(ngModel)]="demandsobj.nom">
+            </div>
+            <div class="patient-username">
+                <label for="patient-username">Username</label>
+                <input id="patient-username" type="text" placeholder="UserName" name="username" [(ngModel)]="demandsobj.username">
+            </div>
+        </div>
+        <div class="set">
+            <div class="patient-location">
+                <label for="patient-typesang">Type Sang</label>
+                <div class="form-floating mt-3">
+                    <select class="form-select" id="patient-typesang" name="typesang" [(ngModel)]="demandsobj.typesang">
+                        <option>Choisir Votre groupe sanguin</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>Je ne sais pas.</option>
+                    </select>
+                </div>
+            </div>
+            <div class="patient-number">
+                <label for="patient-number">Numero de telephone</label>
+                <input id="patient-number" type="text" name="numtel" placeholder="Votre num tel" [(ngModel)]="demandsobj.numtel">
+            </div>
+        </div>
         
-               <button value="submit" >Envoyer</button>
+        
+           
+            <div class="input-data textarea mb-3">
+               <label for="message">Si vous voulez ajouter d 'autre remarque</label>
+               <textarea rows="8" cols="80"  name="message" [(ngModel)]="demandsobj.message"></textarea>
+               
             
-      </div>
-      </div>
-       </form>
-</div>
-<!--div class="container">
-  <div class="row pt-3">
-     <div class="col-6">
-        <h4>Demande informations</h4>
+       </div>
+       
+         </header>
+         <footer>
+           <div class="set">
+             <button id="next">Envoyer</button>
+           </div>
+         </footer>
+       </div>
      </div>
-     <div class="col-6 text-end">
-        <button class="btn btn-outline-success">Ajouter une demande</button>
-     </div>
-     <div class="row mt-5">
-        <table class="table  table-bordered">
-           <tr>
-              <th>Id</th>
-              <th>Nom</th>
-              <th>UserName</th>
-              <th>TypeSang</th>
-              <th>Numero de telephone</th>
-              <th>Message</th>
-              <th>Opération</th>
-           </tr>
-        </table>
-     </div>
-  </div>
-</div-->
+   </form>
+   

@@ -5,7 +5,7 @@
         <img src="assets/images/doctor.png">
       </div>
     </div>
-    <div class="right-container">
+    <div class="right-container"> 
       <header>
         <h1>Pour prendre un rendez-vous, veuillez remplir ce formulaire.!</h1>
         <div class="set">
@@ -42,7 +42,7 @@
             <div class="patient-number">
                 <label for="patient-number">Numero de telephone</label>
                 <input id="patient-number" type="text" name="numtel"placeholder="Votre num tel" [(ngModel)]="formValues.numtel">
-              </div>
+            </div>
     
         </div>
         <div class="set">
@@ -72,6 +72,10 @@
                 <option>O-</option>
                 <option>Je ne sais pas.</option>
             </select>
+            <div class="patient-maladies">
+              <label for="patient-maladies">Avez-vous des maladies?</label>
+              <input id="patient-maladies" type="textarea" placeholder="MM/DD/YYYY" name="maladies" [(ngModel)]="formValues.maladies">
+            </div>
         </div>
     </div>
     </div>

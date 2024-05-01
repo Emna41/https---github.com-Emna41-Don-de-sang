@@ -16,24 +16,36 @@ import { Router } from '@angular/router';
   templateUrl: './sang.component.html',
   styleUrl: './sang.component.css'
 })
-export class SangComponent implements OnInit{
-  formValues = { //Ces valeurs seront liées aux éléments de formulaire dans le template HTML.
-    nom:'',
-    username:'',
-    typesang: '',
-    numtel: '',
-    message:'', 
-  };
-  constructor(private http: HttpClient, private router: Router,private donService:DonService) { }
-  ngOnInit(): void {
-  }
+export class SangComponent {
+  Demands: demandeSang[] = [];
+  demandsobj: demandeSang = new demandeSang(); // Initialisez avec le constructeur
+
+  constructor(private http: HttpClient) {}
+
   submitForm() {
-    const demande = this.formValues; 
+    const demande = this.demandsobj;
     console.log(demande);
-    this.http.post('http://localhost/api/demande_sang.php', demande).subscribe((response:any) => {
-       alert(response.message); //Méthode appelée lors de la soumission du formulaire. Récupère les valeurs du formulaire à partir de formValues, envoie une requête POST HTTP vers l'API à l'aide de HttpClient, puis écoute la réponse et affiche la réponse .
-      });
+    this.http.post('http://localhost/api/demande_sang.php', demande).subscribe((response: any) => {
+      alert(response.message);
+    });
   }
+}
+
+export class demandeSang {
+  nom: string;
+  username: string;
+  typesang: string;
+  numtel: number;
+  message: string;
+
+  constructor() {
+    this.nom = '';
+    this.username = '';
+    this.typesang = '';
+    this.numtel = 0;
+    this.message = '';
+  }
+}
   /*dons: any;
   donForm:FormGroup;
 
@@ -70,7 +82,7 @@ export class SangComponent implements OnInit{
               showDenyButton: true,
               showCancelButton: true,
               confirmButtonText: "Save",
-              denyButtonText: `Don't save`
+              denyButtonText: Don't save
             }).then((result: { isConfirmed: any; isDenied: any; }) => {
               /* Read more about isConfirmed, isDenied below 
               if (result.isConfirmed) {
@@ -124,7 +136,3 @@ export class SangComponent implements OnInit{
   });
   }*/
  
-
-  
- 
-}

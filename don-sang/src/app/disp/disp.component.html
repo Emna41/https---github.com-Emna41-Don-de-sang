@@ -1,25 +1,33 @@
 <div class="container">
-    <a routerLink="/sang" (click)="envoyer()" class="btn btn-secondary my-5" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Ajout Demande</a>
+    <a routerLink="/don" (click)="getInformation()" class="btn btn-secondary my-5" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Ajout Demande</a>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Username</th>
-                <th scope="col">Type de sang</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Information</th>
+                <th scope="col">Localisation</th>
+                <th scope="col">Date de rendez-vous</th>
+                <th scope="col">Gendre</th>
+                <th scope="col">Numero de telephone</th>
+                <th scope="col">Type sanguin</th>
+                <th scope="col">Banque</th>
+                <th scope="col">Maladies</th>
                 <th scope="col">Opération</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of dons">
+            <tr *ngFor="let item of demands">
                 <td scope="row">{{item.id}}</td>
-                <td>{{item.nom}}</td>
+                <td >{{item.nom}}</td>
                 <td>{{item.username}}</td>
-                <td>{{item.typesang}}</td>
+                <td>{{item.localisation}}</td>
+                <td>{{item.rendez_vous}}</td>
+                <td>{{item.gender}}</td>
                 <td>{{item.numtel}}</td>
-                <td>{{item.information}}</td>
+                <td>{{item.typesang}}</td>
+                <td>{{item.banque}}</td>
+                <td>{{item.maladies}}</td>
                 <td class="btn-group">
                     <button type="button" (click)="updateDemand(item.id, item)" class="btn btn-danger">Update</button>
                     <button type="button" (click)="deleteDemand(item.id)" class="btn btn-primary">Supprimer</button>

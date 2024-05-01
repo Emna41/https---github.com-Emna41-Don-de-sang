@@ -12,6 +12,8 @@ import { HomepageComponent } from "./homepage/homepage.component";
 import { ExdonComponent  } from "./exdon/exdon.component";
 import { ExsangComponent  } from "./exsang/exsang.component";
 import { StockComponent  } from "./stock/stock.component";
+import { DispComponent } from './disp/disp.component';
+import { DisplayComponent } from './display/display.component';
 
 export const routes: Routes = [
     {'path': '','title':'Home',component:HomeComponent},
@@ -26,6 +28,8 @@ export const routes: Routes = [
     {'path':'exdon','title':'exdon',component:ExdonComponent},
     {'path':'exsang','title':'exsang',component:ExsangComponent},
     {'path':'stock','title':'stock',component:StockComponent},
+    {'path':'welcome','title':'welcome',component:DisplayComponent},
+    {'path':'Hope','title':'Hope',component:DispComponent},
     {'path':'**','title':'Not found',component:NotfoundComponent},  
     
     

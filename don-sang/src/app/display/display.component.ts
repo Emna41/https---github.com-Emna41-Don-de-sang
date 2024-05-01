@@ -28,13 +28,13 @@ export class DisplayComponent implements OnInit{
     this.http.get<any>('http://localhost/api/demande_sang.php').subscribe((response)=>{
       console.log("Got the data");
       console.log(response);
-      this.dons=response.data;
+      this.dons=response;
     });
   }
   trackBy(index: number, demande: IDon): number {
     return demande.id;
   }
-  deleteDemand(id: any ):void{
+  deleteDemand(id: any ): void {
     Swal.fire({
       title: "Êtes-vous sûr(e)?",
       text: "Vous ne pourrez pas revenir en arrière!",
@@ -45,17 +45,20 @@ export class DisplayComponent implements OnInit{
       confirmButtonText: "Oui, supprimer!"
     }).then((result: { isConfirmed: any; }) => {
       if (result.isConfirmed) {
-        this.http.delete(`http://localhost/api/demande_sang.php/${id}`).subscribe(() => {
+        this.http.delete(`http://localhost/api/demande_sang.php?id=${id}`).subscribe(() => {
           Swal.fire({
             title: "Supprimé!",
             text: "La demande a été supprimée avec succès.",
             icon: "success"
+          }).then(() => {
+           this.envoyer();
+            // Reload the current page after successful deletion
           });
-          this.envoyer(); // Suppose this is the method to refresh the list after deletion
         });
       }
     });
   }
+  
   updateDemand(id: any, updatedDemand: any): void {
     Swal.fire({
       title: "Êtes-vous sûr(e)?",
@@ -68,13 +71,15 @@ export class DisplayComponent implements OnInit{
     }).then((result: { isConfirmed: any }) => {
       if (result.isConfirmed) {
         // Envoie une requête PUT ou POST avec les données mises à jour
-        this.http.put(`http://localhost/api/demande_sang.php/${id}`, updatedDemand).subscribe(() => {
+        this.http.put(`http://localhost/api/demande_sang.php?id=${id}`, updatedDemand).subscribe(() => {
           Swal.fire({
             title: "Mise à jour réussie!",
             text: "La demande a été mise à jour avec succès.",
             icon: "success"
-          });
-          this.envoyer(); // Rafraîchit la liste après la mise à jour
+          }).then(() => {
+            window.location.reload();
+            // Reload the current page after successful deletion
+          });// Rafraîchit la liste après la mise à jour
         });
       }
     });
